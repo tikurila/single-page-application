@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/src/utils/useScreenSize.js 
 .pnp.js
 
 # testing
