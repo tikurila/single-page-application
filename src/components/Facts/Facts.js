@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideFacts from "./SlideFacts";
+import SlideFacts from "./SlideFacts.js";
 import SwiperCore, {Navigation, Pagination} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper.scss';
@@ -34,8 +34,9 @@ const Facts = ({title, slides}) => {
 
             spaceBetween={40}
             slidesPerView={3}
-            slidesPerGroup={3}
             centeredSlides={true}
+            loop={true}
+            loopFillGroupWithBlank={true}
      > 
      
      {factsSlides}
