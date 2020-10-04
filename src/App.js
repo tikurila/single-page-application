@@ -1,34 +1,31 @@
 import React from 'react';
 import './App.scss';
-import HeroBlock from "./components/HeroBlock/HeroBlock";
+import Header from "./components/header/header";
 import Facts from './components/Facts/Facts';
 import SectorsList from "./components/SectorsList/SectorsList";
-import Footer from "./components/Footer/Footer";
 import AirQuality from './components/AirQuality/AirQuality';
+import Footer from './components/Footer/Footer';
+
 import gcLogo from './assets/GC_logo.svg';
 import ITNLogo from './assets/ITN_logo.svg';
 import shidLogo from './assets/shid_emozhl_logo.svg';
 
 
-
-
 function App() {
   const partners = [shidLogo, ITNLogo, gcLogo];
-
   const navLinks = [
-     {
+    {
       title: "Основные факты",
-        href: "#facts"
-     },
+      href: "#facts"
+    },
     {
       title: "Индекс качества воздуха",
-        href: "#quality"
+      href: "#quality"
     },
     {
       title: "Политика по уменьшению загрязнений",
-       href:  "#politics"
+      href: "#politics"
     }
-    
   ];
 
   const factsSlides = [
@@ -37,7 +34,6 @@ function App() {
       imgUrl: require("./assets/facts-slider/slide-1.jpg"),
       desc: "Женщины и дети – главные жертвы загрязнения воздуха"
     },
-    
     {
       id: '1333',
       imgUrl: require("./assets/facts-slider/slide-2.jpg"),
@@ -57,7 +53,7 @@ function App() {
     {
       id: '1336',
       imgUrl: require("./assets/facts-slider/slide-5.jpg"),
-      desc: "Согласно оценкам, суммарный объем затрат в связи с загрязнением воздуха превышает 5 трлн дол в год"
+      desc: "Согласно оценкам, суммарный объем затрат в связи с загрязнением воздуха превышает 5 трлн долл. в год."
     }
   ];
 
@@ -93,22 +89,20 @@ function App() {
       description: "стратегии уменьшения отходов, сортировки отходов, рециклирования, повторного использования или переработки отходов; а также улучшенные методы биологической утилизации отходов, такие как анаэробная переработка отходов для производства биогаза, являются практически осуществимыми, недорогими альтернативными вариантами открытому сжиганию твердых отходов"
     },
   ];
-  const author = "Поповой Кариной"
-	const designer = "Поповой Кариной";
+
+  const author = "Поповой Кариной";
+  const designer = "Поповой Кариной";
+
 
   return (
-		<>
-			<HeroBlock title="Качество атмосферного воздуха и здоровье"
-								 logos={partners}
-								 links={navLinks}/>
-			<Facts title="Основные факты" slides={factsSlides}/>
-			<AirQuality/>
-			<SectorsList title="Политика по уменьшению загрязнений"
-									 subtitle="Есть много примеров успешной политики по уменьшению загрязнения воздуха в таких секторах, как транспорт, городское планирование, энергетика и промышленность:"
-									 items={sectors}/>
-			<Footer links={navLinks} partners={partners} author={author} designer={designer}/>
-		</>
-	);
-}
+    <>
+      <Header title="Качество атмосферного воздуха и здоровье"logos={partners} links={navLinks} />
+      <Facts title="Основные факты" slides={factsSlides} />
+      <AirQuality />
+      <SectorsList title="Политика по уменьшению загрязнений" subtitle="Есть много примеров успешной политики по уменьшению загрязнения воздуха в таких секторах, как транспорт, городское планирование, энергетика и промышленность:" items={sectors} />
+      <Footer links={navLinks} partners={partners} author={author} designer={designer} />
+    </>
+  );
+};
 
 export default App;
