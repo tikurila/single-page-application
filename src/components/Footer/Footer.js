@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import './Footer.scss';
 
@@ -8,7 +9,7 @@ const Footer = ({partners, links, author, designer}) => {
 	return (
 		<footer className="footer">
 			<div className="container">
-				<div className="footer-partners">
+				<div className="footer-partners"> 
 					{partnersLogos}
 				</div>
 				
@@ -35,3 +36,4 @@ const Footer = ({partners, links, author, designer}) => {
 };
 
 export default Footer;
+
