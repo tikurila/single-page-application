@@ -12,8 +12,10 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-responsive": "^8.1.0",
     "react-scripts": "3.4.3",
     "swiper": "^6.3.1",
+    "tooltip": "^1.6.1",
     "use-screen-size": "^1.1.0"
   },
   "scripts": {
